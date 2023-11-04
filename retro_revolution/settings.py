@@ -33,7 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-lornavav-retro-revolutio-75y5z8iew9.us2.codeanyapp.com',
-    'localhost']
+    'retro-revolution-edfee9efb97b.herokuapp.com','localhost']
 
 
 # Application definition
