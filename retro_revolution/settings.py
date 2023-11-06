@@ -33,8 +33,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-lornavav-retro-revolutio-75y5z8iew9.us2.codeanyapp.com',
-    'retro-revolution-edfee9efb97b.herokuapp.com','localhost']
+    'retro-revolution-edfee9efb97b.herokuapp.com', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-lornavav-retro-revolutio-75y5z8iew9.us2.codeanyapp.com'
+]
 
 # Application definition
 
@@ -95,6 +98,16 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'retro_revolution.wsgi.application'
 
@@ -160,3 +173,4 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
