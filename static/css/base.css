@@ -1,0 +1,16 @@
+/*Default Styling*/
+
+html {
+    height: 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background: url('/static/images/hero_image_homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
