@@ -34,7 +34,7 @@
         <link rel="icon" type="image/x-icon" href="{% static 'images/favicon/favicon.ico' %}">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar fixed-top navbar-expand-lg bg-light">
                 <div class="container-fluid">
                     <a href="{% url 'home' %}"class="navbar-brand">
                         <h1 class="logo-font my-0 text-black">Retro Revolution</h1>
@@ -80,7 +80,7 @@
                         </ul>
                     </div>
                 </div> 
-            </nav> 
+            </nav>
 
 
         {% if messages %}

@@ -11,6 +11,18 @@ html {
 }
 
 body {
-    background: url('/static/images/hero_image_homepage.jpg') no-repeat center center fixed;
+    background: url('/static/images/hero_image_homepage.jpg') no-repeat center fixed;
     background-size: cover;
+    height: 100vh;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
