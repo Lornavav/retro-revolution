@@ -25,7 +25,9 @@
                     {% for collectable in collectables %}
                         <div class="col-sm-6 col-md-6 lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}">
+                                <a href="{% url 'collectable_detail' collectable.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}">
+                                </a>
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ collectable.name }}</p>
                                 </div>
