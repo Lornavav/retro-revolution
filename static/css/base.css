@@ -26,3 +26,19 @@ body {
     background: white;
     z-index: -1;
 }
+
+.top-padding {
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+.image-container {
+    outline-style: double;
+    outline-color: blueviolet;
+}
+
+@media screen and (max-width: 761px) {
+    .top-padding {
+        padding-right: 50px;
+    }
+}
