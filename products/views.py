@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Collectable
+from .models import Collectable, Genre
 
 
 def all_collectables(request):
@@ -9,8 +9,14 @@ def all_collectables(request):
 
     collectables = Collectable.objects.all()
     query = None
+    genres = None
 
     if request.GET:
+        if 'genre' in request.GET:
+            genres = request.GET['genre'].split(',')
+            collectables = collectables.filter(genre__name__in=genres)
+            genres = Genre.objects.filter(name__in=genres)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -23,6 +29,7 @@ def all_collectables(request):
     context = {
         'collectables': collectables,
         'search_term': query,
+        'current_genres': genres,
     }
 
     return render(request, 'collectables/collectables.html', context)
