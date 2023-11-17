@@ -8,9 +8,17 @@
         <div class="row">
             <div class="col-12 d-grid justify-content-center">
                 <h2 class="logo-font">Collectables</h2>
-                <hr class="w-50 mb-1">
+                <hr class="w-100 mt-0">
             </div>
         </div>
+    </div>
+    <div class="col-12 col-md-6 order-md-first">
+        <p class="text-muted mt-3 ms-5">
+            {% if search_term or current_genres or current_plaforms != 'None_None'%}
+                <span class="small"><a href="{% url 'collectables' %}">Home</a> | </span>
+            {% endif %}
+            {{ collectables|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+        </p>
     </div>
     <div class="row">
         <div class="product-container col-10 offset-1">
