@@ -57,12 +57,12 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=action">Action</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=adventures">Adventure</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=beat em up">Beat Em Up</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=adventure">Adventure</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=beat_em_up">Beat Em Up</a></li>
                                         <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=console">Console</a></li>
                                         <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=rpg">RPG</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=action,adventures,beat em up,console,rpf">View All</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?genre=action,adventure,beat_em_up,console,rpg">View All</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -70,14 +70,14 @@
                                         Platform
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">C64</a></li>
-                                        <li><a class="dropdown-item" href="#">PS3</a></li>
-                                        <li><a class="dropdown-item" href="#">PS4</a></li>
-                                        <li><a class="dropdown-item" href="#">PS Vita</a></li>
-                                        <li><a class="dropdown-item" href="#">Strategy Guide</a></li>
-                                        <li><a class="dropdown-item" href="#">Xbox 360</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?platform=c64">C64</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?platform=ps3">PS3</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?platform=ps4">PS4</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?platform=ps_vita">PS Vita</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?platform=strategy_guide">Strategy Guide</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?platform=xbox_360">Xbox 360</a></li>
                                         <li><hr class="dropdown-divider"></li>                                        
-                                        <li><a class="dropdown-item" href="#">View All</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'collectables' %}?platform=c64,ps3,ps4,ps_vita,strategy_guide,xbox_360">View All</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
