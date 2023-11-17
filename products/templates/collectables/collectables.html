@@ -23,12 +23,15 @@
                                 <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}">
                             </a>
                             <div class="card-body pb-0">
-                                <p class="mb-0 text-center">{{ collectable.name }}</p>
+                                <p class="mb-0 text-center fw-bold">{{ collectable.name }}</p>
+                                <p class="fw-semibold text-center text-uppercase mt-2">
+                                    <a href="{% url 'collectables' %}?platform={{ collectable.platform.name }}">{{ collectable.platform.name }}</a>
+                                </p>
                             </div>
-                            <div class="card=footer bg-white pt-0 border-0 text-left">
+                            <div class="card=footer">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="lead mb-0 text-center font-weight-bold">€{{ collectable.price }}</p>
+                                        <p class="lead mb-0 text-center fw-semibold">€{{ collectable.price }}</p>
                                     </div>
                                 </div>
                             </div>
