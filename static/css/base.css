@@ -37,6 +37,24 @@ body {
     outline-color: blueviolet;
 }
 
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white;
+}
+
 @media screen and (max-width: 761px) {
     .top-padding {
         padding-right: 50px;
