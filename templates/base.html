@@ -102,7 +102,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
+                                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                             {% if grand_total %}
                                                 €{{ grand_total|floatformat:2 }}
