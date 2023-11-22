@@ -45,6 +45,11 @@
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.collectable.price }}</p>
                                     </td>
+                                    <td class="py-3 text-center">
+                                        <small>
+                                            <a class="pointer text-danger float-right" id="remove_{{ item.item_id }}">Remove</a>
+                                        </small>
+                                    </td>
                                 </tr>
                             {% endfor %}
                             <tr class="total-table">
@@ -89,4 +94,21 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var url = `/bag/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': crsfToken};
+
+        $.post(url, data)
+         .done(function() {
+            location.reload();
+         });
+    })
+
+</script>
 {% endblock %}
