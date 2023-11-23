@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from products.models import Collectable
 
 
@@ -22,3 +22,17 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def remove_from_bag(request, item_id):
+    """Remove the item from the shopping bag"""
+    bag = request.session.get('bag', {})
+    collectable = get_object_or_404(Collectable, pk=item_id)
+
+    try:
+        bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)
