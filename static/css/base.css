@@ -63,11 +63,17 @@ body {
     position: fixed;
     top: 72px;
     right: 15px;
-    z-index: 9999999999;
+    z-in
+dex: 9999999999;
 }
 
 .toast {
     overflow: visible;
+}
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 @media screen and (max-width: 761px) {

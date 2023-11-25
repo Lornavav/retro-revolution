@@ -29,12 +29,16 @@ def add_to_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
+
+    collectable = get_object_or_404(Collectable, pk=item_id)
     bag = request.session.get('bag', {})
 
     try:
         bag.pop(item_id)
+        messages.info(request, f'Removed {collectable.name} from your bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
     except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
