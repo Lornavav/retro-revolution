@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+from django.contrib import messages
+
 from products.models import Collectable
 
 
@@ -19,6 +21,7 @@ def add_to_bag(request, item_id):
         bag[item_id] += 1
     else:
         bag[item_id] = 1
+        messages.success(request, f'Added {collectable.name} to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
