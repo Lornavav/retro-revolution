@@ -63,8 +63,7 @@ body {
     position: fixed;
     top: 72px;
     right: 15px;
-    z-in
-dex: 9999999999;
+    z-index: 9999999999;
 }
 
 .toast {
