@@ -1,6 +1,6 @@
 # Retro Revolution
 
-![Am I responsive]
+[Am I responsive]
 
 [View live website]
 
