@@ -50,7 +50,7 @@
                                     </td>
                                 </tr>
                             {% endfor %}
-                            <tr class="total-table">
+                            <tr class="total-table text-end">
                                 <td colspan="5" class="pt-5">
                                     <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
@@ -63,7 +63,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5" class="text-right">
+                                <td colspan="5" class="text-end">
                                     <a href="{% url 'collectables' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
