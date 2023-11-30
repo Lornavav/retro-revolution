@@ -1,0 +1,1 @@
+default_aoo_config = 'checkout.apps.CheckoutConfig'
