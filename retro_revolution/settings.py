@@ -31,11 +31,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-lornavav-retro-revolutio-75y5z8iew9.us2.codeanyapp.com',
+    '8000-lornavav-retrorevolutio-dscnyiuatvu.ws-eu106.gitpod.io',
     'retro-revolution-edfee9efb97b.herokuapp.com', 'localhost']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-lornavav-retro-revolutio-75y5z8iew9.us2.codeanyapp.com'
+    'https://8000-lornavav-retrorevolutio-dscnyiuatvu.ws-eu106.gitpod.io'
 ]
 
 # Application definition
