@@ -56,7 +56,8 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('collectables'))
 
         current_bag = bag_contents(request)
@@ -102,4 +103,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-
