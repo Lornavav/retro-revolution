@@ -86,7 +86,7 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         {% if request.user.is_authenticated %}
-                                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
                                             <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                                             {% if request.user.is_superuser %}
                                             <li><hr class="dropdown-divider"></li>
