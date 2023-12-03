@@ -76,3 +76,27 @@ def add_collectable(request):
 
     return render(request, template, context)
 
+
+def edit_collectable(request, collectable_id):
+    """Edit a collectable to the store"""
+    collectable = get_object_or_404(Collectable, pk=collectable_id)
+    if request.method == 'POST':
+        form = CollectableForm(request.POST, request.FILES, instance=collectable)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('collectable_detail', args=[collectable.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = CollectableForm(instance=collectable) 
+        messages.info(request, f'You are editing {collectable.name}')
+
+    template = 'collectables/edit_collectable.html'
+    context = {
+        'form': form,
+        'collectable': collectable,
+    }
+
+    return render(request, template, context)
+
