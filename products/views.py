@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+
 from .models import Collectable, Genre, Platform
+from .forms import CollectableForm
 
 
 def all_collectables(request):
@@ -52,3 +54,15 @@ def collectable_detail(request, collectable_id):
     }
 
     return render(request, 'collectables/collectable_detail.html', context)
+
+
+def add_collectable(request):
+    """Add a collectable to the store"""
+    form = CollectableForm()
+    template = 'collectables/add_collectable.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+

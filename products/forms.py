@@ -12,8 +12,8 @@ class CollectableForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         platforms = Platform.objects.all()
 
-        self.fields['category'].choices = name
+        self.fields['platform']
         for field_name, field in self.fields.items():
-            field.widget.attr['class'] = 'border-black rounded-0'
+            field.widget.attrs['class'] = 'border-black rounded-0'
 
 
