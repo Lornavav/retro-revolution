@@ -61,9 +61,9 @@ def add_collectable(request):
     if request.method == 'POST':
         form = CollectableForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            collectable = form.save()
             messages.success(request, 'Successfully added collectable!')
-            return redirect(reverse('add_collectable'))
+            return redirect(reverse('collectable_detail', args=[collectable.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -99,4 +99,13 @@ def edit_collectable(request, collectable_id):
     }
 
     return render(request, template, context)
+
+
+def delete_collectable(request, collectable_id):
+    """Delete a product from the store"""
+    product = get_object_or_404(Collectable, pk=collectable_id)
+    product.delete()
+    messages.success(request, 'Collectable deleted!')
+    return redirect(reverse('collectables'))
+
 

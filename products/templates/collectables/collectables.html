@@ -46,6 +46,12 @@
                   <p class="lead mb-0 text-center fw-semibold">
                     €{{ collectable.price }}
                   </p>
+                  {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_collectable' collectable.id %}">Edit</a> |
+                        <a class="text-danger"  href="{% url 'delete_collectable' collectable.id %}">Delete</a>
+                    </small>
+                  {% endif %}
                 </div>
               </div>
             </div>

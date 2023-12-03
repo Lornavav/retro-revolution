@@ -7,5 +7,6 @@ urlpatterns = [
     path('<int:collectable_id>/', views.collectable_detail, name='collectable_detail'),
     path('add/', views.add_collectable, name='add_collectable'),
     path('edit/<int:collectable_id>/', views.edit_collectable, name='edit_collectable'),
+    path('delete/<int:collectable_id>/', views.delete_collectable, name='delete_collectable'),
 ]
 

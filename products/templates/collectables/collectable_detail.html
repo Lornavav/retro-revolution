@@ -28,6 +28,12 @@
                     {{ collectable.description }}
                     <hr>
                     <p class="price fw-bold">€ {{ collectable.price }}</p>
+                    {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_collectable' collectable.id %}">Edit</a>
+                        <a class="text-danger"  href="{% url 'delete_collectable' collectable.id %}">Delete</a>
+                    </small>
+                    {% endif %}
                     <form action="{% url 'add_to_bag' collectable.id %}" class="form" method="POST">
                         {% csrf_token %}
                         <div class="col-12">
