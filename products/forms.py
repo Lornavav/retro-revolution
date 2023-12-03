@@ -8,6 +8,7 @@ class CollectableForm(forms.ModelForm):
         model = Collectable
         fields = '__all__'
 
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         platforms = Platform.objects.all()
