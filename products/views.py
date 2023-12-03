@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
 from .models import Collectable, Genre, Platform
@@ -56,8 +57,13 @@ def collectable_detail(request, collectable_id):
     return render(request, 'collectables/collectable_detail.html', context)
 
 
+@login_required
 def add_collectable(request):
     """Add a collectable to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = CollectableForm(request.POST, request.FILES)
         if form.is_valid():
@@ -77,8 +83,14 @@ def add_collectable(request):
     return render(request, template, context)
 
 
+
+@login_required
 def edit_collectable(request, collectable_id):
     """Edit a collectable to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that')
+        return redirect(reverse('home'))
+
     collectable = get_object_or_404(Collectable, pk=collectable_id)
     if request.method == 'POST':
         form = CollectableForm(request.POST, request.FILES, instance=collectable)
@@ -101,8 +113,13 @@ def edit_collectable(request, collectable_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_collectable(request, collectable_id):
     """Delete a product from the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that')
+        return redirect(reverse('home'))
+        
     product = get_object_or_404(Collectable, pk=collectable_id)
     product.delete()
     messages.success(request, 'Collectable deleted!')
