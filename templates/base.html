@@ -90,7 +90,7 @@
                                             <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                                             {% if request.user.is_superuser %}
                                             <li><hr class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="#">Product Management</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'add_collectable' %}">Product Management</a></li>
                                             {% endif %}
                                          {% else %}
                                             <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>

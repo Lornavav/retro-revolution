@@ -58,7 +58,17 @@ def collectable_detail(request, collectable_id):
 
 def add_collectable(request):
     """Add a collectable to the store"""
-    form = CollectableForm()
+    if request.method == 'POST':
+        form = CollectableForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added collectable!')
+            return redirect(reverse('add_collectable'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = CollectableForm()
+    
     template = 'collectables/add_collectable.html'
     context = {
         'form': form,
