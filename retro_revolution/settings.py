@@ -194,11 +194,8 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
-if "DEVELOPMENT" in os.environ
-    STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
-else:
-    STRIPE_WH_SECRET_PROD = os.environ.get('STRIPE_WH_SECRET_PROD', '')
 
 if "DEVELOPMET" in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
