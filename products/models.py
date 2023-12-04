@@ -43,7 +43,7 @@ class Collectable(models.Model):
             return False
     
     def save(self, *args, **kwargs):
-        self.in_stock = self.product_in_stock
+        self.in_stock = self.product_in_stock()
         super().save(*args, **kwargs)
 
 class SellCollectable(models.Model):

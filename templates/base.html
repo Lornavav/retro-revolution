@@ -73,15 +73,14 @@
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                 <a href="{% url 'add_collectable' %}" class="dropdown-item">Product Management</a>
-                                <a href="" class="dropdown-item">Add New Blog Post</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'sell_collectable' %}" class="dropdown-item">Sell a Collectable</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">Contact Us</a>
                             </div>
                         </li>
                         <li class="list-inline-item">
@@ -108,6 +107,7 @@
                         aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    {% include 'includes/mobile_top_header.html' %}
                 </nav>
             </div>
         </header>

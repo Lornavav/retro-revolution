@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
 <div class="overlay"></div>
 <div class="contianer-fluid collectable-header">
   <div class="col-12">
@@ -43,8 +46,12 @@
             <div class="card=footer">
               <div class="row">
                 <div class="col">
-                  <p class="lead mb-0 text-center fw-semibold">
-                    €{{ collectable.price }}
+                  <p class="lead mb-0 text-center fw-semibold">€{{ collectable.price }}
+                    {% if collectable.in_stock %}
+                    <span class="badge badge-pill badge-success">IN STOCK</span>
+                    {% else %}
+                    <span class="badge badge-pill badge-danger">SOLD OUT</span>
+                    {% endif %}
                   </p>
                   {% if request.user.is_superuser %}
                     <small class="ml-3">

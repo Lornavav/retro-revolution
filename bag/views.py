@@ -18,7 +18,7 @@ def add_to_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
-        bag[item_id] += 1
+        bag[item_id] = int(bag[item_id]) + 1
     else:
         bag[item_id] = 1
         messages.success(request, f'Added {collectable.name} to your bag')
