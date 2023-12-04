@@ -59,6 +59,8 @@ def checkout(request):
             order.save()
             for item_id, item_data in bag.items():
                 try:
+                    collectable.stock_amount = 0
+                    collectable.in_stock = False
                     collectable = Collectable.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(

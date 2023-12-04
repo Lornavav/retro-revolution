@@ -43,9 +43,12 @@
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
+                            {% if collectable.in_stock %}
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% else %}
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag" disabled>
+                            {% endif %}
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
                 </div>
