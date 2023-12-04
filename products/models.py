@@ -45,3 +45,17 @@ class SellCollectable(models.Model):
     def __str__(self):
         return self.collectable_item
     
+
+class Review(models.Model):
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(null=False, blank=False)
+    product_type = models.ForeignKey(
+        'Platform', null=True, blank=True, on_delete=models.SET_NULL)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.full_name}"

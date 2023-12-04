@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Collectable, Platform, Genre, SellCollectable
+from .models import Collectable, Platform, Genre, SellCollectable, Review
 
 
 class CollectableAdmin(admin.ModelAdmin):
@@ -32,7 +32,18 @@ class SellCollectableAdmin(admin.ModelAdmin):
         'image'
     )
 
+class ReviewsAdmin(admin.ModelAdmin):
+    list_display = (
+        'full_name',
+        'email',
+        'product_type',
+        'body',
+        'created_on',
+    )
 
+    ordering = ('created_on',)
+
+admin.site.register(Review, ReviewsAdmin)
 admin.site.register(Collectable, CollectableAdmin)
 admin.site.register(Platform, PlatformAdmin)
 admin.site.register(Genre, GenreAdmin)

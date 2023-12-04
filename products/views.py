@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
-from .models import Collectable, Genre, Platform, SellCollectable
-from .forms import CollectableForm, SellCollectableForm
+from .models import Collectable, Genre, Platform, SellCollectable, Review
+from .forms import CollectableForm, SellCollectableForm, PostReviewForm
 
 
 def all_collectables(request):
@@ -139,6 +139,30 @@ def sell_collectable(request):
     form = SellCollectableForm()
     template = 'collectables/sell_collectable.html'
     context = {
+        'form': form,
+    }
+    return render(request, template, context)
+
+
+
+def reviews(request):
+    """A view to return the reviews page"""
+
+    reviews = Review.objects.all()
+
+    if request.method == 'POST':
+        form = PostReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you for posting a review!')
+            return redirect(reverse('reviews'))
+        else:
+            form = PostReviewForm()
+
+    form = PostReviewForm()
+    template = 'reviews/reviews.html'
+    context = {
+        'reviews': reviews,
         'form': form,
     }
     return render(request, template, context)

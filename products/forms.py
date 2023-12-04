@@ -1,5 +1,5 @@
 from django import forms
-from .models import Collectable, Platform, SellCollectable
+from .models import Collectable, Platform, SellCollectable, Review
 
 
 class CollectableForm(forms.ModelForm):
@@ -34,3 +34,10 @@ class SellCollectableForm(forms.ModelForm):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+
+class PostReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ('full_name', 'email',
+                  'product_type', 'body',)
