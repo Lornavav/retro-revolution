@@ -19,6 +19,7 @@
         {% block corecss %}
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
             <script src="https://kit.fontawesome.com/92dd2e7f78.js" crossorigin="anonymous"></script>
         {% endblock %}
 
@@ -118,6 +119,7 @@
         </header>
 
 
+
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -136,13 +138,67 @@
         </div>
     {% endif %}
 
+    {% block page_header %}
+    {% endblock %}
+
     {% block content %}
     {% endblock %}
 
-
-    <footer>
-
-    </footer>
+    {% block footer %}
+        <footer class="footer mt-auto py-3 ">
+            <div class="row">
+                <div class="col-12 text-center text-md-start col-md-4">
+                    <h4 class="fw-bold">Get In Touch</h4>
+                    <p><i class="fa-solid fa-phone"></i> Phone: 01 495 4455</p>
+                    <p><i class="fa-regular fa-envelope"></i> Email: <a href="mailto:rrevolution2023@gmail.com">rrevolution2023@gmail.com</a></p>
+                    <span class="instagram-icon"><i class="fab fa-instagram"></i></span><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    aria-label="Vist our Instagram page (opens in new tab)"></a>
+                    <span class="fb-icon"><i class="fab fa-facebook-square"></i></span><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                    aria-label="Vist our Facebook page (opens in new tab)"></a>
+                </div>
+                <div class="d-block d-md-none">
+                    <hr>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <p><a href="">Privacy Policy</a></p>
+                    <p>© 2023 RetroRevolution</p>
+                    <p><small>For educational purposes only.</small></p>
+                </div>
+                <div class="d-block d-md-none">
+                    <hr>
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end text-center text-md-end pe-3">
+                    <div id="mc_embed_shell">
+                        <div id="mc_embed_signup">
+                            <form action="https://gmail.us9.list-manage.com/subscribe/post?u=639caada5da2230c5aee25a35&amp;id=96c5ad50c5&amp;f_id=00ad1be1f0" 
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                <div id="mc_embed_signup_scroll">
+                                <h2>Subscribe to receive latest news!</h2>
+                                <div class="mc-field-group"><label for="mce-EMAIL">Email Address 
+                                    <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                                    <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                                </div>
+                                <div id="mce-responses" class="clear foot">
+                                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                                    <div class="response" id="mce-success-response" style="display: none;"></div>
+                                </div>
+                                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                    /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                                    <input type="text" name="b_639caada5da2230c5aee25a35_96c5ad50c5" tabindex="-1" value="">
+                                </div>
+                                <div class="optionalParent">
+                                    <div class="clear foot">
+                                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iFnyaw" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                            </div>
+                            </div>
+                            </form>
+                        </div>
+                                    
+                </div>
+    {% endblock %}
+    
 
     <!-- BS JavaScript bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -153,6 +209,9 @@
     <script src="{% static 'js/base.js' %}"></script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
+    <!-- MailChimp-->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
 
     {% block postloadjs %}
     {% endblock %}
