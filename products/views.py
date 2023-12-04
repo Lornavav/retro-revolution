@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
-from .models import Collectable, Genre, Platform
-from .forms import CollectableForm
+from .models import Collectable, Genre, Platform, SellCollectable
+from .forms import CollectableForm, SellCollectableForm
 
 
 def all_collectables(request):
@@ -126,3 +126,19 @@ def delete_collectable(request, collectable_id):
     return redirect(reverse('collectables'))
 
 
+def sell_collectable(request):
+    if request.method == 'POST':
+        form = SellCollectableForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thanks for your interest! We will be in contact soon.')
+            return redirect(reverse('sell_collectable'))
+        else:
+            form = SellCollectable()
+
+    form = SellCollectableForm()
+    template = 'collectables/sell_collectable.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)

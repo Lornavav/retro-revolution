@@ -30,3 +30,18 @@ class Collectable(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class SellCollectable(models.Model):
+    collectable_item = models.CharField(max_length=250, null=False, blank=False)
+    platform = models.ForeignKey(
+        'Platform', null=True, blank=True, on_delete=models.SET_NULL)
+    additional_information = models.TextField(null=True, blank=True)
+    full_name = models.CharField(max_length=250, null=False, blank=False)
+    contact_number = models.CharField(max_length=250, null=False, blank=False)
+    email = models.CharField(max_length=250, null=False, blank=False)
+    image = CloudinaryField('image')
+
+    def __str__(self):
+        return self.collectable_item
+    

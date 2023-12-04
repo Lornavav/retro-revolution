@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from products.models import Collectable
 
 from django_countries.fields import CountryField
 
@@ -33,10 +32,4 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     if created:
         UserProfile.objects.create(user=instance)
-    # existing users: just save the profile
     instance.userprofile.save()
-
-class Wishlist(models.Model):
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    product = models.ForeignKey(Collectable, on_delete=models.CASCADE)
-    created = models.DateTimeField
