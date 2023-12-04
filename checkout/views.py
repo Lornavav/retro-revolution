@@ -57,24 +57,30 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
-            for item_id, item_data in bag.items():
+            for item_id, item_quantity in bag.items():
                 try:
-                    collectable.stock_amount = 0
-                    collectable.in_stock = False
                     collectable = Collectable.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            collectable=collectable,
-                        )
-                        order_line_item.save()
+                    if collectable.stock_amount > 0:
+                        collectable.in_stock -= int(item_quantity)
+                        collectable.save()
+                    else:
+                        messages.error(request,
+                                       f'{collectable.name} is out of stock')
+                        return redirect('view_bag')
+                    
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        collectable=collectable,
+                        quantity=int(item_quantity),
+                    )
+                    order_line_item.save()
                 except Collectable.DoesNotExist:
                     messages.error(request, (
                         'One of the products in your bag was not found in our database.'
                         'Please call us fo assistance!')
                     )
-                    order.delete()
-                    return redirect(reverse('view_bag'))
+                order.delete()
+                return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
