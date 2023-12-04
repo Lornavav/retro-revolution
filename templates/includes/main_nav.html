@@ -6,50 +6,35 @@
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="/products/" id="mens-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="All Products">All Products</a>
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="" id="genre-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="All Products">Genre</a>
             <div class="dropdown-menu border-0">
-                <a href="/products/" class="dropdown-item">All Products</a>
-                <a href="/products/?category=Glasses" class="dropdown-item">Glasses</a>
-                <a href="/products/?category=Sunglasses" class="dropdown-item">Sunglasses</a>
-                <a href="/products/?sort=price&direction=asc" class="dropdown-item">By Price (low to high)</a>
-                <a href="/products/?sort=price&direction=desc" class="dropdown-item">By Price (high to low)</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?genre=action">Action</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?genre=adventure">Adventure</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?genre=beat_em_up">Beat Em Up</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?genre=console">Console</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?genre=rpg">RPG</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?genre=action,adventure,beat_em_up,console,rpg">View All</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=Glasses" id="glasses-link">
-                Spectacles
-            </a>
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="" id="genre-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="All Products">Platform</a>
+            <div class="dropdown-menu border-0">
+                <a class="dropdown-item" href="{% url 'collectables' %}?platform=c64">C64</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?platform=ps3">PS3</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?platform=ps4">PS4</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?platform=ps_vita">PS Vita</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?platform=strategy_guide">Strategy Guide</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?platform=xbox_360">Xbox 360</a>
+                <a class="dropdown-item" href="{% url 'collectables' %}?platform=c64,ps3,ps4,ps_vita,strategy_guide,xbox_360">View All</a>
+            </div>
         </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=Sunglasses" id="sunglasses-link">
-                Sunnies
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <div>
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'journal' %}" id="journal-link">
-                Journal
-            </a>
-        </div>
-        </li>
-
-        <li class="nav-item">
-            <div>
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}" id="contact-link">
-                Contact Us
-            </a>
-        </div>
-        </li>
-
         <li class="nav-item">
             <div>
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'reviews' %}" id="reviews-link">
                 Reviews
             </a>
-        </div>
+            </div>
         </li>
     </ul>
 </div>
