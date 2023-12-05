@@ -1,18 +1,27 @@
 html {
+    position: relative;
     height: 100%;
 }
 
 body {
-    background: url('/static/images/hero_image_hompage2.jpg') no-repeat center center fixed;
+    background: url('/static/images/hero_image_homepage.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(90vh - 164px);
-    color: #555;
-    margin-bottom: 60px;
-    font-family: 'Lato';
+    color: black;
+    font-family: "Overpass Mono", monospace;
 }
 
-.overlay {
-    background: #000;
+#topnav h1 {
+    color: #f500eb;
+}
+
+.container h1 {
+    display: inline-block;  
+    background-color: black;
+}
+
+.page-heading {
+    color: #f500eb;
 }
 
 /* from Bulma */
@@ -24,10 +33,6 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
-
 .main-logo-link {
     width: fit-content;
 }
@@ -35,7 +40,7 @@ body {
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    min-width: 120px;
 }
 
 .btn-black {
@@ -278,7 +283,8 @@ input[name='q']::placeholder {
 }
 
 #delivery-banner {
-    background-color: #000;
+    background-color: #fff;
+    color: #f500eb;
 
 }
 
@@ -286,10 +292,25 @@ input[name='q']::placeholder {
     border-color: #f500eb;
 }
 
-.image-container {
-    position: relative;
+.footer {
+    padding: 1rem;
+    min-width: 300px;
+    z-index: 999;
+    min-height: 6rem;
+    z-index: 999;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
+footer a {
+    color: #f500eb;
+    text-decoration: none;
+}
+
+.recent-reviews p {
+    color: #f500eb;
+
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
