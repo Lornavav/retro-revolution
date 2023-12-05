@@ -1,84 +1,90 @@
 {% extends 'base.html' %} 
 {% load static %} 
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
 <div class="overlay"></div>
 <div class="contianer-fluid">
     <div class="row">
-      <div class="col text-center mt-3">
+      <div class="col text-center mt-2 px-5">
         <h2 class="logo-font text-black">Collectables</h2>
         <hr class="w-50 mt-1"/>
       </div>
     </div>
   </div>
-  <div class="col-12 col-md-6 order-md-first">
-    <p class="text-muted mt-3 ms-5">
-      {% if search_term or current_genres or current_plaforms != 'None_None'%}
-      <span class="small"><a href="{% url 'collectables' %}">Home</a> | </span>
-      {% endif %} {{ collectables|length }} Products{% if search_term %} found
-      for <strong>"{{ search_term }}"</strong>{% endif %}
-    </p>
-  </div>
   <div class="row">
-        {% for collectable in collectables %}
-        <div class="col-sm-6 col-md-6 lg-4 col-xl-3">
-          <div class="card pink-border h-100 p-2">
-            <a href="{% url 'collectable_detail' collectable.id %}">
-              <img
-                class="card-img-top img-fluid"
-                src="{{ collectable.image.url }}"
-                alt="{{ collectable.name }}"
-              />
-            </a>
-            <div class="card-body pb-0">
-              <p class="mb-0 text-center fw-bold">{{ collectable.name }}</p>
-              <p class="fw-semibold text-center text-uppercase mt-2">
-                <a
-                  href="{% url 'collectables' %}?platform={{ collectable.platform.name }}"
-                  >{{ collectable.platform.name }}</a
-                >
+    <div class="product-container col-10 offset-1">
+      <div class="row mt-1 mb-2">
+          <div class="col-12 col-md-6 order-md-first">
+            <p class="text-muted mt-3 text-center text-md-left">
+              {% if search_term or current_genres or current_plaforms != 'None_None'%}
+              <span class="small"><a href="{% url 'collectables' %}">Home</a> | </span>
+              {% endif %} {{ collectables|length }} Products{% if search_term %} found
+              for <strong>"{{ search_term }}"</strong>{% endif %}
               </p>
-            </div>
-            <div class="card=footer">
-              <div class="row">
-                <div class="col">
-                  <p class="lead mb-0 text-center fw-semibold">€{{ collectable.price }}
-                    {% if collectable.in_stock %}
-                    <span class="badge badge-pill badge-success">IN STOCK</span>
-                    {% else %}
-                    <span class="badge badge-pill badge-danger">SOLD OUT</span>
-                    {% endif %}
-                  </p>
-                  {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_collectable' collectable.id %}">Edit</a> |
-                        <a class="text-danger"  href="{% url 'delete_collectable' collectable.id %}">Delete</a>
-                    </small>
-                  {% endif %}
+          </div>
+          <div class="row">
+            {% for collectable in collectables %}
+              <div class="col-sm-6 col-md-6 lg-4 col-xl-3">
+                <div class="card pink-border h-100 p-2">
+                  <div class="image-container">
+                    <a href="{% url 'collectable_detail' collectable.id %}">
+                      <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}" height="100" width="100"/>
+                    </a>
+                  </div>
+                  <div class="card-body font-weight-bold text-center">
+                    <p class="mb-0">{{ collectable.name }}</p>
+                    <p class="mt-2 text-center font-weight-normal text-uppercase">
+                    <a href="{% url 'collectables' %}?platform={{ collectable.platform.name }}">{{ collectable.platform.name }}</a>
+                    </p>
+                  </div>
+                  <div class="card=footer">
+                    <div class="row">
+                      <div class="col">
+                        <p class="lead mb-0 text-center font-weight-bold">€{{ collectable.price }}
+                          {% if collectable.in_stock %}
+                            <span class="badge badge-pill badge-success">IN STOCK</span>
+                          {% else %}
+                            <span class="badge badge-pill badge-danger">SOLD OUT</span>
+                          {% endif %}
+                        </p>
+                          {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                              <a href="{% url 'edit_collectable' collectable.id %}">Edit</a> |
+                              <a class="text-danger"  href="{% url 'delete_collectable' collectable.id %}">Delete</a>
+                            </small>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+                {% if forloop.counter|divisibleby:1 %}
+                  <div class="col-12 d-sm-none mb-5">
+                  <hr />
+                  </div>
+                {% endif %} {% if forloop.counter|divisibleby:2 %}
+                  <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                  <hr />
+                  </div>
+                {% endif %} {% if forloop.counter|divisibleby:3 %}
+                  <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                  <hr />
+                  </div>
+                {% endif %} {% if forloop.counter|divisibleby:4 %}
+                  <div class="col-12 d-none d-xl-block mb-5">
+                  <hr />
+                  </div>
+                {% endif %} {% endfor %}
           </div>
         </div>
-        {% if forloop.counter|divisibleby:1 %}
-        <div class="col-12 d-sm-none mb-5">
-          <hr />
-        </div>
-        {% endif %} {% if forloop.counter|divisibleby:2 %}
-        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-          <hr />
-        </div>
-        {% endif %} {% if forloop.counter|divisibleby:3 %}
-        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-          <hr />
-        </div>
-        {% endif %} {% if forloop.counter|divisibleby:4 %}
-        <div class="col-12 d-none d-xl-block mb-5">
-          <hr />
-        </div>
-        {% endif %} {% endfor %}
-      </div>
     </div>
   </div>
-</div>
 {% endblock content %}

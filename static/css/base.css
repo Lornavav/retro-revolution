@@ -3,11 +3,16 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/static/images/hero_image_hompage2.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(90vh - 164px);
     color: #555;
+    margin-bottom: 60px;
     font-family: 'Lato';
+}
+
+.overlay {
+    background: #000;
 }
 
 /* from Bulma */
@@ -275,6 +280,14 @@ input[name='q']::placeholder {
 #delivery-banner {
     background-color: #000;
 
+}
+
+.pink-border {
+    border-color: #f500eb;
+}
+
+.image-container {
+    position: relative;
 }
 
 
