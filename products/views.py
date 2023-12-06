@@ -8,7 +8,8 @@ from .forms import CollectableForm, SellCollectableForm, PostReviewForm
 
 
 def all_collectables(request):
-    """ A view to show all collectables, including sorting and search queries"""
+    """ A view to show all collectables,
+    including sorting and search queries"""
 
     collectables = Collectable.objects.all()
     query = None
@@ -29,10 +30,11 @@ def all_collectables(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "Please enter search criteria!")
                 return redirect(reverse('collectables'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             collectables = collectables.filter(queries)
 
     context = {
@@ -69,19 +71,19 @@ def add_collectable(request):
         if form.is_valid():
             collectable = form.save()
             messages.success(request, 'Successfully added collectable!')
-            return redirect(reverse('collectable_detail', args=[collectable.id]))
+            return redirect(reverse('collectable_detail', args=[collectable.id]))  # noqa
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. Please\
+            correct the form.')
     else:
         form = CollectableForm()
-    
+
     template = 'collectables/add_collectable.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
-
 
 
 @login_required
@@ -93,15 +95,16 @@ def edit_collectable(request, collectable_id):
 
     collectable = get_object_or_404(Collectable, pk=collectable_id)
     if request.method == 'POST':
-        form = CollectableForm(request.POST, request.FILES, instance=collectable)
+        form = CollectableForm(request.POST, request.FILES, instance=collectable)  # noqa
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('collectable_detail', args=[collectable.id]))
+            return redirect(reverse('collectable_detail', args=[collectable.id]))  # noqa
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. Please ensure \
+            the form is valid.')
     else:
-        form = CollectableForm(instance=collectable) 
+        form = CollectableForm(instance=collectable)
         messages.info(request, f'You are editing {collectable.name}')
 
     template = 'collectables/edit_collectable.html'
@@ -119,7 +122,7 @@ def delete_collectable(request, collectable_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Collectable, pk=collectable_id)
     product.delete()
     messages.success(request, 'Collectable deleted!')
@@ -131,7 +134,8 @@ def sell_collectable(request):
         form = SellCollectableForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Thanks for your interest! We will be in contact soon.')
+            messages.success(request, 'Thanks for your interest! \
+            We will be in contact.')
             return redirect(reverse('sell_collectable'))
         else:
             form = SellCollectable()
@@ -142,7 +146,6 @@ def sell_collectable(request):
         'form': form,
     }
     return render(request, template, context)
-
 
 
 def reviews(request):

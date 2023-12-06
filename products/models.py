@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 
 class Platform(models.Model):
     name = models.CharField(max_length=254)
-  
+
     def __str__(self):
         return self.name
 
@@ -41,13 +41,15 @@ class Collectable(models.Model):
             return True
         else:
             return False
-    
+
     def save(self, *args, **kwargs):
         self.in_stock = self.product_in_stock()
         super().save(*args, **kwargs)
 
+
 class SellCollectable(models.Model):
-    collectable_item = models.CharField(max_length=250, null=False, blank=False)
+    collectable_item = models.CharField(max_length=250,
+                                        null=False, blank=False)
     platform = models.ForeignKey(
         'Platform', null=True, blank=True, on_delete=models.SET_NULL)
     additional_information = models.TextField(null=True, blank=True)
@@ -58,7 +60,7 @@ class SellCollectable(models.Model):
 
     def __str__(self):
         return self.collectable_item
-    
+
 
 class Review(models.Model):
     full_name = models.CharField(max_length=50, null=False, blank=False)

@@ -14,12 +14,14 @@ class CollectableAdmin(admin.ModelAdmin):
 
     ordering = ('name',)
 
+
 class PlatformAdmin(admin.ModelAdmin):
     ordering = ('name',)
 
 
 class GenreAdmin(admin.ModelAdmin):
     ordering = ('name',)
+
 
 class SellCollectableAdmin(admin.ModelAdmin):
     list_display = (
@@ -32,6 +34,7 @@ class SellCollectableAdmin(admin.ModelAdmin):
         'image'
     )
 
+
 class ReviewsAdmin(admin.ModelAdmin):
     list_display = (
         'full_name',
@@ -40,8 +43,8 @@ class ReviewsAdmin(admin.ModelAdmin):
         'body',
         'created_on',
     )
-
     ordering = ('created_on',)
+
 
 admin.site.register(Review, ReviewsAdmin)
 admin.site.register(Collectable, CollectableAdmin)

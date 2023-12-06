@@ -9,8 +9,8 @@ class UserProfileForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated 
-        labels and set autofocus on first field         
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
         """
 
         super().__init__(*args, **kwargs)
@@ -31,6 +31,6 @@ class UserProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
+            self.fields[field].widget.attrs['class'] = (
+                'border-black rounded-0 profile-form-input')
             self.fields[field].label = False
-

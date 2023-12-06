@@ -8,7 +8,6 @@ class CollectableForm(forms.ModelForm):
         model = Collectable
         fields = '__all__'
 
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         platforms = Platform.objects.all()
@@ -20,7 +19,7 @@ class CollectableForm(forms.ModelForm):
 
 class SellCollectableForm(forms.ModelForm):
     class Meta:
-        model= SellCollectable
+        model = SellCollectable
         fields = '__all__'
         labels = {
             'collectable_item': 'Collectable Item',
@@ -29,9 +28,9 @@ class SellCollectableForm(forms.ModelForm):
             'full_name': 'Full Name',
             'contact_number': 'Contact Number',
             'email': 'Email',
-            'image': 'Image', 
+            'image': 'Image',
         }
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

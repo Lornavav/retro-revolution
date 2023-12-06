@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block page_header%}
 <div class="container header-contianer">
     <div class="row">
@@ -13,16 +14,15 @@
 <div class="overlay"></div>
 <div class="container-fluid top-padding">
     <div class="row">
-        <div class="col col-12 col-md-6 col-lg-4 offest-lg-2">
+        <div class="col col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 <a href="{{ collectable.image.url }}" target="blank">
-                    <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}" height="100" width="100">
+                    <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}">
                 </a>
             </div>
-        </div>
-   
+        </div>  
         <div class="col col-12 col-md-6 col-lg-4">
-            <div class="collectable-detail-container mb-5 mt-md-5" >
+            <div class="collectable-detail-container mb-5 mt-md-5">
                 <p class="font-weight-bold">{{ collectable.name }}</p>
                 <p class="fw-lighter text-uppercase custom-detail ">{{ collectable.platform }} | {{ collectable.genre }} | {{ collectable.year }}</p>
                 <hr>
@@ -56,5 +56,4 @@
         </div>
     </div> 
 </div>
-<hr>      
 {% endblock %}
