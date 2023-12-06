@@ -7,16 +7,12 @@
 body {
     background: url('https://res.cloudinary.com/dizyhvzya/image/upload/v1701826978/hero_image_homepage3_sn5tq0.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(90vh - 164px);
     color: black;
     font-family: "Overpass Mono", monospace;
-    min-height: 100vh;
-    overflow-x: hidden;
-
 }
 
 .top-padding {
-    padding-top: 50px;
+    padding-top: 200px;
 }
 
 #topnav h1 {

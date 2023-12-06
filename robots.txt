@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://retro-revolution-edfee9efb97b.herokuapp.com-8ed2528e7/sitemap.xml

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/sell_collectable/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/bag/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?genre=action</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?genre=adventure</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?genre=beat_em_up</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?genre=console</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?genre=rpg</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?genre=action,adventure,beat_em_up,console,rpg</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?platform=c64</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?platform=ps3</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?platform=ps4</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?platform=ps_vita</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?platform=strategy_guide</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?platform=xbox_360</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?platform=c64,ps3,ps4,ps_vita,strategy_guide,xbox_360</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/reviews/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/5/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/6/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/8/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/14/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/15/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/18/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/13/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/10/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/27/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/28/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/29/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/30/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/1/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/11/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/12/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/4/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/2/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/16/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/17/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/?platform=nintendo_3ds</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/25/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/26/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/7/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/9/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/20/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/19/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/22/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/21/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retro-revolution-edfee9efb97b.herokuapp.com/collectables/24/</loc>
+  <lastmod>2023-12-06T16:24:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
