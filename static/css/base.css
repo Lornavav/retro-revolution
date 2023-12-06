@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url('/static/images/hero_image_homepage.jpg') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/dizyhvzya/image/upload/v1701826978/hero_image_homepage3_sn5tq0.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(90vh - 164px);
     color: black;
