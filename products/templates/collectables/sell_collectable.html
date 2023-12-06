@@ -4,33 +4,31 @@
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
-        <div class="col">
-
-        </div>
+        <div class="col"></div>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container top-padding">
+<div class="container mt-2">
     <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="mb-4">Sell a Collectable</h2>
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="page-heading">Sell a Collectable</h2>
+            <h6 class="text-muted">If you are looking to sell a collectable on our site. 
+                Please fill out the form below and we will be in touch.
+            </h6>
             <hr>
         </div>
     </div>
 
     <div class="row">
-        <p>If you are looking to sell a collectable on our site. Please fill out the form below and we will be in touch.</p>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <form method="POST" action="{% url 'sell_collectable' %}" enctype="multipart/form-data">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'sell_collectable' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div class="mb-3">
+                <div class="text-right">
                     <button type="submit" href="{% url 'home' %}" class="btn-black">Go Back</button>
                     <button type="submit" class="btn-black">Submit</button>
                 </div>

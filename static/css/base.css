@@ -12,6 +12,10 @@ body {
     font-family: "Overpass Mono", monospace;
 }
 
+.top-padding {
+    padding-top: 200px;
+}
+
 #topnav h1 {
     color: #f500eb;
 }
@@ -32,8 +36,13 @@ body {
 .card-body a {
     color: #f500eb;
 }
-.image-container {
-    position: relative;
+
+.custom-detail {
+    color: #f500eb;
+}
+
+.price {
+    color: #f500eb
 }
 
 /* from Bulma */

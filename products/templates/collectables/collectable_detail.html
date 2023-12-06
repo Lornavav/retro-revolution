@@ -11,48 +11,50 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="contianer-fluid">
+<div class="container-fluid top-padding">
     <div class="row">
         <div class="col col-12 col-md-6 col-lg-4 offest-lg-2">
             <div class="image-container my-5">
                 <a href="{{ collectable.image.url }}" target="blank">
-                    <img class="card-img-top img-fluid"  src="{{ collectable.image.url }}" alt="{{ collectable.name }}" height="100" width="100">
+                    <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}" height="100" width="100">
                 </a>
             </div>
         </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-        <div class="collectable-details-container mb-5 mt-md-5" >
-            <p class="fw-bold">{{ collectable.name }}</p>
-            <p class="fw-lighter text-uppercase ">{{ collectable.platform }} | {{ collectable.genre }} | {{ collectable.year }}</p>
-            <hr>
-            {{ collectable.description }}
-            <hr>
-            <p class="price fw-bold">€ {{ collectable.price }}</p>
-            {% if request.user.is_superuser %}
-            <small class="ml-3">
-                <a href="{% url 'edit_collectable' collectable.id %}">Edit</a>
-                <a class="text-danger"  href="{% url 'delete_collectable' collectable.id %}">Delete</a>
-            </small>
-            {% endif %}
-            <form action="{% url 'add_to_bag' collectable.id %}" class="form" method="POST">
-                {% csrf_token %}
-                <div class="col-12">
-                    <a href="{% url 'collectables' %}" class="btn btn-outline-black rounded-0 mt-5">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                    {% if collectable.in_stock %}
-                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-                    {% else %}
-                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag" disabled>
-                    {% endif %}
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                </div>
-            </form>
+   
+        <div class="col col-12 col-md-6 col-lg-4">
+            <div class="collectable-detail-container mb-5 mt-md-5" >
+                <p class="font-weight-bold">{{ collectable.name }}</p>
+                <p class="fw-lighter text-uppercase custom-detail ">{{ collectable.platform }} | {{ collectable.genre }} | {{ collectable.year }}</p>
+                <hr>
+                {{ collectable.description }}
+                <hr>
+                <p class="price font-weight-bold">€ {{ collectable.price }}</p>
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_collectable' collectable.id %}">Edit</a>
+                    <a class="text-danger"  href="{% url 'delete_collectable' collectable.id %}">Delete</a>
+                </small>
+                {% endif %}
+                <form action="{% url 'add_to_bag' collectable.id %}" class="form" method="POST">
+                    {% csrf_token %}
+                    <div class="col-12">
+                        <a href="{% url 'collectables' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                        {% if collectable.in_stock %}
+                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                        {% else %}
+                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag" disabled>
+                        {% endif %}
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-</div>          
+    </div> 
+</div>   
+<hr>      
 {% endblock %}
