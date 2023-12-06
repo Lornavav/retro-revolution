@@ -21,10 +21,10 @@
   <div class="row">
     <div class="product-container col-10 offset-1">
       <div class="row mt-1 mb-2">
-          <div class="col-12 col-md-6 order-md-first">
+          <div class="home-span col-12 col-md-6 order-md-first">
             <p class="text-muted mt-3 text-center text-md-left">
               {% if search_term or current_genres or current_plaforms != 'None_None'%}
-              <span class="small"><a href="{% url 'collectables' %}">Home</a> | </span>
+              <span><a href="{% url 'collectables' %}">Home</a> | </span>
               {% endif %} {{ collectables|length }} Products{% if search_term %} found
               for <strong>"{{ search_term }}"</strong>{% endif %}
               </p>
@@ -44,10 +44,10 @@
                     <a href="{% url 'collectables' %}?platform={{ collectable.platform.name }}">{{ collectable.platform.name }}</a>
                     </p>
                   </div>
-                  <div class="card=footer">
+                  <div class="card-footer">
                     <div class="row">
                       <div class="col">
-                        <p class="lead mb-0 text-center font-weight-bold">€{{ collectable.price }}
+                        <p class="lead mb-0 price text-center font-weight-bold">€{{ collectable.price }}
                           {% if collectable.in_stock %}
                             <span class="badge badge-pill badge-success">IN STOCK</span>
                           {% else %}
@@ -86,4 +86,5 @@
         </div>
     </div>
   </div>
+  <hr>
 {% endblock content %}

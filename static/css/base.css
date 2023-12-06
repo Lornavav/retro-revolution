@@ -1,6 +1,7 @@
-html {
-    position: relative;
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -22,6 +23,17 @@ body {
 
 .page-heading {
     color: #f500eb;
+}
+
+.home-span a {
+    color: #f500eb;
+}
+
+.card-body a {
+    color: #f500eb;
+}
+.image-container {
+    position: relative;
 }
 
 /* from Bulma */
@@ -283,8 +295,8 @@ input[name='q']::placeholder {
 }
 
 #delivery-banner {
-    background-color: #fff;
-    color: #f500eb;
+    background-color: #f500eb;
+    color: #fff;
 
 }
 
@@ -305,6 +317,10 @@ input[name='q']::placeholder {
 footer a {
     color: #f500eb;
     text-decoration: none;
+}
+
+footer a:hover {
+    color: #000;
 }
 
 .recent-reviews p {
@@ -337,3 +353,4 @@ footer a {
         height: calc(100vh - 116px);
     }
 }
+

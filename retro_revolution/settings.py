@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-lornavav-retrorevolutio-dscnyiuatvu.ws-eu106.gitpod.io',
@@ -62,7 +62,6 @@ INSTALLED_APPS = [
 
     # Other
     'crispy_forms',
-    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -78,9 +77,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'retro_revolution.urls'
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap 4"
 
 TEMPLATES = [
     {

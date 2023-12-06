@@ -31,11 +31,13 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="mb-3">
-                    <button type="submit" class="btn-custom">Submit</button>
-                    <button type="submit" href="{% url 'home' %}" class="btn-custom">Home</button>
+                    <button type="submit" href="{% url 'home' %}" class="btn-black">Go Back</button>
+                    <button type="submit" class="btn-black">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+    <hr>
 </div>
+
 {% endblock %}
