@@ -1,12 +1,21 @@
-* {
+/* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+/*section {
     min-height: calc(100vh - 164px);
-}
+}*/
 
 body {
-    background: url('https://res.cloudinary.com/dizyhvzya/image/upload/v1701826978/hero_image_homepage3_sn5tq0.jpg') no-repeat center center fixed;
-    background-size: cover;
     color: black;
     font-family: "Overpass Mono", monospace;
+}
+
+.index-img {
+    background: url('https://res.cloudinary.com/dizyhvzya/image/upload/v1701826978/hero_image_homepage3_sn5tq0.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .overlay {
@@ -297,6 +306,11 @@ input[name='q']::placeholder {
 footer a {
     color: #f500eb;
     text-decoration: none;
+    padding: 1rem;
+    min-width: 300px;
+    z-index: 999;
+    min-height: 6rem;
+    z-index: 999;
 }
 
 footer a:hover {
@@ -304,8 +318,6 @@ footer a:hover {
 }
 
 .footer {
-    position: sticky;
-    top: 100vh;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -349,5 +361,3 @@ footer a:hover {
         height: calc(100vh - 116px);
     }
 }
-
-
