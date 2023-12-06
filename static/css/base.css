@@ -10,10 +10,13 @@ body {
     height: calc(90vh - 164px);
     color: black;
     font-family: "Overpass Mono", monospace;
+    min-height: 100vh;
+    overflow-x: hidden;
+
 }
 
 .top-padding {
-    padding-top: 200px;
+    padding-top: 50px;
 }
 
 #topnav h1 {
@@ -361,5 +364,6 @@ footer a:hover {
     body {
         height: calc(100vh - 116px);
     }
+
 }
 
