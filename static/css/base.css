@@ -1,50 +1,36 @@
-/* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}*/
-
-/*section {
-    min-height: calc(100vh - 164px);
-}*/
+}
 
 body {
+    background: url('https://res.cloudinary.com/dizyhvzya/image/upload/v1701826978/hero_image_homepage3_sn5tq0.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(90vh - 164px);
     color: black;
     font-family: "Overpass Mono", monospace;
 }
 
-.index-img {
-    background: url('https://res.cloudinary.com/dizyhvzya/image/upload/v1701826978/hero_image_homepage3_sn5tq0.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
-/* Page Headings */
 .top-padding {
-    padding-top: 200px;
+    padding-top: 150px;
 }
 
-.page-heading {
-    color: #f500eb;
-}
-
-/* Homepage Styling */
 #topnav h1 {
     color: #f500eb;
 }
 
-.container h1 {
+.hero-text h2 {
     display: inline-block;  
     background-color: black;
+    color: #f8f9fa;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.page-heading {
+    color: #f500eb !important;
+    background-color: transparent !important;
 }
 
 .home-span a {
@@ -55,7 +41,6 @@ body {
     color: #f500eb;
 }
 
-/* Collectable Details */
 .custom-detail {
     color: #f500eb;
 }
@@ -123,12 +108,35 @@ body {
     background: #000 !important;
 }
 
-/*a.category-badge > span.badge:hover {
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
-}*/
+}
 
-/* Search Bar */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 input[name='q']::placeholder {
     color: #aab7c4;
 }
@@ -201,6 +209,15 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -255,7 +272,7 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* Product Form 
+/* Product Form */
 
 .btn-file {
     position: relative;
@@ -281,9 +298,8 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
-} */
+}
 
-/* MailChimp */
 #mc_embed_signup { 
     background:#fff; 
     clear:left; 
@@ -293,48 +309,44 @@ input[name='q']::placeholder {
 
 #delivery-banner {
     background-color: #f500eb;
-    color: #fff;
-
+    color: #000;
+    font-weight: bold;
 }
 
-/* Collectable Cards */
 .pink-border {
     border-color: #f500eb;
 }
 
-/* Footer Styling */
-footer a {
-    color: #f500eb;
-    text-decoration: none;
+.footer {
     padding: 1rem;
     min-width: 300px;
     z-index: 999;
     min-height: 6rem;
     z-index: 999;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer a {
+    color: #f500eb;
+    text-decoration: none;
 }
 
 footer a:hover {
     color: #000;
 }
 
-.footer {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/* Reviews */
 .recent-reviews p {
     color: #f500eb;
+
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-  }
+#id_default_country {
+    background-color: #fff;
+    color: #264653;
+    width: 50%;
+    border: 1px solid #264653;
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -354,7 +366,7 @@ footer a:hover {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 150px;
     }
 
     body {

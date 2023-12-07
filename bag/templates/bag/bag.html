@@ -36,7 +36,7 @@
           {% for item in bag_items %}
             <tr>
               <td class="p-3 w-25">
-                <img src="{{ item.collectable.image.url }}" class="img-fluid rounded"/>
+                <img src="{{ item.collectable.image.url }}" alt="picture of item for purchase" class="img-fluid rounded" height="100" width="100">
               </td>
               <td class="py-3">
                 <p class="my-0"><strong>{{ item.collectable.name }}</strong></p>
@@ -67,11 +67,11 @@
           </tr>
           <tr>
             <td colspan="5" class="text-right pr-4">
-              <a href="{% url 'collectables' %}"class="btn btn-outline-black rounded-0 btn-lg">
+              <a href="{% url 'collectables' %}" class="btn btn-outline-black rounded-0 btn-lg">
                 <span class="icon"><i class="fas fa-chevron-left"></i></span>
                 <span class="text-uppercase">Keep Shopping</span>
               </a>
-              <a href="{% url 'checkout' %}"class="btn btn-black rounded-0 btn-lg">
+              <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                 <span class="text-uppercase">Secure Checkout</span>
                 <span class="icon"><i class="fas fa-lock"></i></span>
               </a>
@@ -95,7 +95,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type="text/javascript">
+<script>
   // Remove item and reload on click
   $(".remove-item").click(function (e) {
     var csrfToken = "{{ csrf_token }}";

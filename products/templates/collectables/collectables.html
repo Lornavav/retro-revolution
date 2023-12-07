@@ -35,7 +35,7 @@
                 <div class="card pink-border h-100 p-2">
                   <div class="image-container">
                     <a href="{% url 'collectable_detail' collectable.id %}">
-                      <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}" height="100" width="100"/>
+                      <img class="card-img-top img-fluid" src="{{ collectable.image.url }}" alt="{{ collectable.name }}" height="100" width="100">
                     </a>
                   </div>
                   <div class="card-body font-weight-bold text-center">
@@ -67,19 +67,19 @@
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
                   <div class="col-12 d-sm-none mb-5">
-                  <hr />
+                  <hr>
                   </div>
                 {% endif %} {% if forloop.counter|divisibleby:2 %}
                   <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                  <hr />
+                  <hr>
                   </div>
                 {% endif %} {% if forloop.counter|divisibleby:3 %}
                   <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                  <hr />
+                  <hr>
                   </div>
                 {% endif %} {% if forloop.counter|divisibleby:4 %}
                   <div class="col-12 d-none d-xl-block mb-5">
-                  <hr />
+                  <hr>
                   </div>
                 {% endif %} {% endfor %}
           </div>
