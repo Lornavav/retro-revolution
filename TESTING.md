@@ -61,7 +61,7 @@ Lighthouse testing was carried out on the site using Chrome developer tools. The
 
 ### HTML Validation
 
-HTML validation was carried out on Chrome by viewing the page source in a hope to limit the errors due to Jinja templating. The fikes were passed through W3C ![W3C](https://validator.w3.org/)
+HTML validation was carried out on Chrome by viewing the page source in a hope to limit the errors due to Jinja templating. The fikes were passed through [W3C](https://validator.w3.org/)
 
 I tested the follow pages:
 
@@ -86,6 +86,42 @@ The same error and warning were appearing for most around aria labels and table 
 ### Responsive Design
 
 Responsive design testing was carried out on the Chrome dev tools responsive decviese. No major issues were returned although user experience coulde defintely improve for mobile with more thought and time put into it. 
+
+### Manual Testing
+
+| Action | Expected | Result |
+| --- | --- | --- |
+| As a **user** I want to see a homepage so I can see what the website is about and view categories. | When the user navigates to the home page they can see the Genre and Platform categories, | Works as expected. | |
+| As a **user** I want to see a header so I navigate to where I want to go.  | When I navigate to the website I will see the home page. Then I will see a header with a business logo, a search bar, a user icon and a shopping bag icon.  | Works as expected. | |
+| As a **user** I want to see a favicon so I can identify the website I am on.| The user can see a favicon when they visit the website | Works as expected. | |
+| As a **user** I want to sign out of my account when I am logged in. | When I am signed into my account and I am finished browsing. Then I will click on the profile icon and will have the option to sign out  | Works as expected. | |
+| As a **user** I want to see a message to confirm my action.| When I have completed an action on the website. Then I will see a message validating the action I have taken | Works as expected. | |
+| As a **staff member** I want to be able to add products through the website. | As a **staff member** I want to be able to add products through the website. Then I will be able to access the product management area where I can add a product for sale.  | Works as expected. | |
+| As a **staff member** I want to be able to delete products through the website. | When I navigate to the website and sign in with my staff username/password. Then I will be able to access the product management area where I can delete an existing product.  | Works as expected. | |
+| As a **staff member** I want to be able to edit products through the website. | When I navigate to the website and sign in with my staff username/password. Then I will be able to access the product management area where I can edit an existing product | Works as expected. | |
+| As a **user** I want to see products on the website that I can browse and purchase. | When I navigate to the website. Then I will see products to browse/purchase | Works as expected. | |
+| As a **user** I want to sign up to receive a newsletter. | When I navigate to the website footer. Then I will see the option to enter my email address to subscribe to the newsletter | Works as expected. | |
+| User hovers the cursor over the product card | The product card gets overlay with a semi-transparent layer and "Click for more" button appears. | Works as expected. | |
+| As a **user** I want to sign in or sign up depending on my account status. | When I navigate to the website and I don't already have an account. Then I will use the register option to sign up for an account | Works as expected. | |
+| As a **user** I want to see a homepage so I can see what the website is about and view categories. | When I navigate to the website I will see the home page. Then I will see the home page with a logo, categories, sign in options, header, footer, a hero image and site information text| Works as expected. | |
+| As a **user** I want to see a footer containing useful information about the website. | When I navigate to the website I will see the home page. Then I will see a footer containing a privacy policy, contact us, delivery information hyperlinks and social media hyperlinks.  | Works as expected. | |
+| As a **user** I want to see a 404 page when I have come across a page that is not found. | When I try to access an incorrect URL. Then I will see a message telling me the page is not available | Works as expected. | |
+| As a **user** I want to see a form where I can submit a review.| The product card gets overlay with a semi-transparent layer and "Click for more" button appears. | Works as expected. | |
+| As a **user** I want to see a form where I can submit a review.| When I navigate to the website I will see the home page. Then I will see an option for reviews | Works as expected. | |
+| As a **user** I want to see a form where I can contact the site owner so that I can sell my own collectables. | When I navigate to the website I will see the home page, then I will see an option under the my account tab to sell a collectable. When I click on sell collectable, Then I will be redirected to a page with a form where I can fill out details about the collectable I want to sell.   | Works as expected. | |
+| As a **user** when I click on a product I want to see further details of that product. | When I click on a product, then I am brought to a new page with the single product displayed. | Works as expected. | |
+| As a **user** I want to purchase an item using Stripe. | When I add an item to my cart. Then I will be able to purchase the item using Stripe. | Works as expected. | |
+
+
+## Bugs
+
+### Known Bugs
+
+* When an item is beeing removed from the cart the toast is no longer displaying, it was working at one point and then disappeared, i think around the time I added the 'sold ot' functionality. I ran out of time to imvestigate but will look at it in the future.
+
+### Bugs encountered along the way 
+
+* Big issues with Stripe webhooks, on one occasion it was because I didn't have my gitpod space set to public. The I had a typo in the secret key at another point.
 
 
 
